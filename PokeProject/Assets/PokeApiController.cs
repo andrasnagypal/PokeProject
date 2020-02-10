@@ -49,12 +49,12 @@ public class PokeApiController : MonoBehaviour
         JSONNode pokeInfo = JSON.Parse(pokeInfoRequest.downloadHandler.text);
        
         PokemonDataModel.ListOfPokemons.Add(pokemonIndex, pokeInfo);
-        Debug.Log("Pokes: "+PokemonDataModel.ListOfPokemons.Count);
-        Debug.Log("Index : "+CurrentIndex);
-        if (CurrentIndex < EndIndex)
-            StartCoroutine(GetPokemAtIndex(CurrentIndex++));
-        else
-            Debug.Log(PokemonDataModel.ListOfPokemons.Count);
+        //Debug.Log("Pokes: "+PokemonDataModel.ListOfPokemons.Count);
+        //Debug.Log("Index : "+CurrentIndex);
+        //if (CurrentIndex < EndIndex)
+        //    StartCoroutine(GetPokemAtIndex(CurrentIndex++));
+        //else
+        //    Debug.Log(PokemonDataModel.ListOfPokemons.Count);
     }
    
 }
