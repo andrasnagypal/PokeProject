@@ -632,6 +632,37 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 101627528}
   m_CullTransparentMesh: 0
+--- !u!1 &135092528 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 9211092171824866102, guid: 1b7aeb7830fb6ba46800be5d755ed25c,
+    type: 3}
+  m_PrefabInstance: {fileID: 4880465954461007552}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &135092529
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 135092528}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1344c3c82d62a2a41a3576d8abb8e3ea, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 0.9572856, b: 0, a: 1}
+  m_RaycastTarget: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Texture: {fileID: 0}
+  m_UVRect:
+    serializedVersion: 2
+    x: 0
+    y: 0
+    width: 1
+    height: 1
 --- !u!1 &139279598
 GameObject:
   m_ObjectHideFlags: 0
@@ -10460,6 +10491,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1736309506}
   - component: {fileID: 1736309505}
+  - component: {fileID: 1736309507}
   m_Layer: 0
   m_Name: GameManager
   m_TagString: Untagged
@@ -10493,6 +10525,20 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 11
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1736309507
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1736309504}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 06eb4034e6cda1844989544c585e0709, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  PlayerPokeView: {fileID: 135092528}
+  RawImageOfPokemon: {fileID: 135092529}
 --- !u!1 &1739958262
 GameObject:
   m_ObjectHideFlags: 0
@@ -13259,7 +13305,8 @@ PrefabInstance:
       propertyPath: m_Name
       value: PlayerPokemon
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 8438486508500909508, guid: 1b7aeb7830fb6ba46800be5d755ed25c, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 1b7aeb7830fb6ba46800be5d755ed25c, type: 3}
 --- !u!224 &4880465954461007553 stripped
 RectTransform:
