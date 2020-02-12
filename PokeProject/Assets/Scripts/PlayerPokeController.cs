@@ -31,6 +31,7 @@ public class PlayerPokeController : MonoBehaviour
             PlayerPokeData = PokemonDataModel.ListOfPokemons[25];
             GetComponent<PokeApiController>().GetPokemonTexture(PlayerPokeData, RawImageOfPokemon);
             PokemonDataModel.ListOfPokemons.Clear();
+            
         }
     }
 }
