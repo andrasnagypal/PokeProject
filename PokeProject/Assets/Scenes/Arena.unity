@@ -10643,11 +10643,11 @@ MonoBehaviour:
   PlayerPokeToScale: {x: 0, y: 0, z: 0}
   EnemyPokeToScale: {x: 0, y: 0, z: 0}
   PokePanelToScale: {x: 0, y: 0, z: 0}
-  MoveUpTime: 4
+  MoveUpTime: 2.5
   ScaleUpTime: 3
-  PlayerPoke: {fileID: 0}
-  EnemyPoke: {fileID: 0}
-  PokePanel: {fileID: 0}
+  PlayerPoke: {fileID: 135092528}
+  EnemyPoke: {fileID: 1654401813}
+  PokePanel: {fileID: 259045342}
 --- !u!1 &1739958262
 GameObject:
   m_ObjectHideFlags: 0

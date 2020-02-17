@@ -14,13 +14,15 @@ public class LoadingManager : MonoBehaviour
     }
     public void OnLoadedLevel()
     {
+        LeanTween.scale(Land, LandScaleTo, ScaleUpTime).setOnComplete(LoadUpPokeUI);
+        LeanTween.scale(Grass1, Grass1ScaleTo, .01f);
+        LeanTween.scale(Grass2, Grass2ScaleTo, .01f);
+        LeanTween.scale(Grass3, Grass3ScaleTo, .01f);
         LeanTween.moveLocalY(Grass1, 0, MoveUpTime);
         LeanTween.moveLocalY(Grass2, 0, MoveUpTime);
         LeanTween.moveLocalY(Grass3, 0, MoveUpTime);
-        LeanTween.scale(Grass1, Grass1ScaleTo, ScaleUpTime);
-        LeanTween.scale(Grass2, Grass2ScaleTo, ScaleUpTime);
-        LeanTween.scale(Grass3, Grass3ScaleTo, ScaleUpTime);
-        LeanTween.scale(Land, LandScaleTo, ScaleUpTime).setOnComplete(LoadUpPokeUI);
+        
+       
     }
 
 
