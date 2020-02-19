@@ -7,10 +7,11 @@ public class LoadingManager : MonoBehaviour
     [SerializeField] GameObject Grass1, Grass2, Grass3, Land, RiverGrass, River, Trees;
     [SerializeField] Vector3 Grass1ScaleTo, Grass2ScaleTo, Grass3ScaleTo, LandScaleTo, RiverGrassScaleTo, RiverScaleTo, TreeScaleTo,PlayerPokeToScale,EnemyPokeToScale,PokePanelToScale;
     [SerializeField] float MoveUpTime, ScaleUpTime;
-    [SerializeField] GameObject PlayerPoke, EnemyPoke, PokePanel;
+    [SerializeField] GameObject PlayerPoke, EnemyPoke, PokePanel,LoadingBar;
+    
     private void Start()
     {
-        OnLoadedLevel();
+        //OnLoadedLevel();
     }
     public void OnLoadedLevel()
     {
