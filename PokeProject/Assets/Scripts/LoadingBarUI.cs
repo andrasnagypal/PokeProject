@@ -5,7 +5,7 @@ using UnityEngine.UI;
 
 public class LoadingBarUI : MonoBehaviour
 {
-    [SerializeField] Image LoadingBarInfo, LoadingBar;
+    [SerializeField] Image  LoadingBar;
     [SerializeField] int MaxLoad,CurrentLoad=0;
     public int MaxAmountOfLoadingTicks { get
         { return MaxLoad; }
@@ -24,7 +24,10 @@ public class LoadingBarUI : MonoBehaviour
     }
 
 
-
+    public bool IsFinishedLoading()
+    {
+        return CurrentLoad == MaxAmountOfLoadingTicks;
+    }
     public void UpdateLoadingBarUI()
     {
 

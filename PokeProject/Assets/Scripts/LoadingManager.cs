@@ -8,14 +8,14 @@ public class LoadingManager : MonoBehaviour
     [SerializeField] Vector3 Grass1ScaleTo, Grass2ScaleTo, Grass3ScaleTo, LandScaleTo, RiverGrassScaleTo, RiverScaleTo, TreeScaleTo,PlayerPokeToScale,EnemyPokeToScale,PokePanelToScale;
     [SerializeField] float MoveUpTime, ScaleUpTime;
     [SerializeField] GameObject PlayerPoke, EnemyPoke, PokePanel,LoadingBar;
-    
+    [SerializeField] LoadingBarUI LoadingView;
     private void Start()
     {
         //OnLoadedLevel();
     }
     public void OnLoadedLevel()
     {
-        LeanTween.scale(Land, LandScaleTo, ScaleUpTime).setOnComplete(LoadUpPokeUI);
+        LeanTween.scale(Land, LandScaleTo, ScaleUpTime);
         LeanTween.scale(Grass1, Grass1ScaleTo, .01f);
         LeanTween.scale(Grass2, Grass2ScaleTo, .01f);
         LeanTween.scale(Grass3, Grass3ScaleTo, .01f);
@@ -29,6 +29,13 @@ public class LoadingManager : MonoBehaviour
 
     public void LoadUpPokeUI()
     {
-        StageOfTheGame.CurrentStateOfTheGame++;
+        LoadingView.UpdateLoadingBarUI();
+        if (LoadingView.IsFinishedLoading())
+        {
+            StageOfTheGame.CurrentStateOfTheGame = StateOfTheGame.ChoseFirstPoke;
+            LoadingBar.SetActive(false);
+            OnLoadedLevel();
+            
+        }
     }
 }

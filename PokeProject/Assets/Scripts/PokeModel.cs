@@ -5,7 +5,7 @@ using UnityEngine;
 public class PokeModel 
 {
     public string PokeName;
-    public Sprite[] SpritesOfPoke;
+    public Texture2D[] SpritesOfPoke;
     public string[] TypesOfPoke;
     public string[] AbilitiesOfPoke;
     public int Lvl, Stamina, MaxNumberOfAttacks, CurrentAttackAmount,IndexOfPoke;
