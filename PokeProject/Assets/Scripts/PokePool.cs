@@ -7,7 +7,7 @@ using UnityEngine.Networking;
 public class PokePool : MonoBehaviour
 {
     [SerializeField] int NumberOfPokeShouldBeInPool,IsLessThanThisAmountStartLoadingOtherPokes;
-    /*[SerializeField]*/ public List<PokeModel> ListOfPokeModels = new List<PokeModel>();
+    [SerializeField] Queue<PokeModel> ListOfPokeModels = new Queue<PokeModel>();
     [SerializeField] string basePokeURL= "https://pokeapi.co/api/v2/";
     int StartIndexForPokeAPI = 1, EndIndexIndexForPokeAPI = 808;
     private void Awake()
@@ -41,7 +41,7 @@ public class PokePool : MonoBehaviour
 
     public void AddPoke(PokeModel poke)
     {
-        ListOfPokeModels.Add(poke);
+        ListOfPokeModels.Enqueue(poke);
     }
 
 }
