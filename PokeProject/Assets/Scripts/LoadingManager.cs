@@ -44,6 +44,7 @@ public class LoadingManager : MonoBehaviour
         if (LoadingView.IsFinishedLoading())
         {
             StageOfTheGame.CurrentStateOfTheGame = StateOfTheGame.ChoseFirstPoke;
+            GetComponent<TypeCounter>().WriteOutTypes();
             StartCoroutine(OnLoadedLevel());
             
             

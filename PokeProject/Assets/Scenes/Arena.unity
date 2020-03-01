@@ -11206,6 +11206,7 @@ GameObject:
   - component: {fileID: 1736309508}
   - component: {fileID: 1736309509}
   - component: {fileID: 1736309510}
+  - component: {fileID: 1736309511}
   m_Layer: 0
   m_Name: GameManager
   m_TagString: Untagged
@@ -11301,7 +11302,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d7ee1621c28942443bef9e1adc823e36, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  NumberOfPokeShouldBeInPool: 10
+  NumberOfPokeShouldBeInPool: 50
   IsLessThanThisAmountStartLoadingOtherPokes: 5
   basePokeURL: https://pokeapi.co/api/v2/
 --- !u!114 &1736309510
@@ -11328,6 +11329,37 @@ MonoBehaviour:
   - front_female
   - front_shiny
   - front_shiny_female
+--- !u!114 &1736309511
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1736309504}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c554d3140cb3d1f49b012697bad51839, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  TypesOfPoke:
+  - electric
+  - steel
+  - ground
+  - dragon
+  - psychic
+  - poison
+  - fighting
+  - bug
+  - dark
+  - water
+  - ghost
+  - fairy
+  - fire
+  - flying
+  - rock
+  - normal
+  - ice
+  - grass
 --- !u!1 &1739958262
 GameObject:
   m_ObjectHideFlags: 0
