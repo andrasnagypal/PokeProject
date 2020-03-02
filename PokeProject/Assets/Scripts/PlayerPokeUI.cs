@@ -9,6 +9,7 @@ public class PlayerPokeUI : MonoBehaviour
     void Awake()
     {
         TheImage = GetComponent<RawImage>();
+        
     }
 
     public void AddImage(Texture2D sprite)

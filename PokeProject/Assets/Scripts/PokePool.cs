@@ -43,5 +43,8 @@ public class PokePool : MonoBehaviour
     {
         ListOfPokeModels.Enqueue(poke);
     }
-
+    public PokeModel GivePoke()
+    {
+        return ListOfPokeModels.Dequeue();
+    }
 }

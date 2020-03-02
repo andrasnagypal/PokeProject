@@ -115,6 +115,7 @@ public class PokeFactory : MonoBehaviour
             }
             data.SpritesOfPoke[index] = DownloadHandlerTexture.GetContent(SpriteRequest);
             data.SpritesOfPoke[index].filterMode = FilterMode.Point;
+
         }
         else
             data.SpritesOfPoke[index] = null;
@@ -125,8 +126,9 @@ public class PokeFactory : MonoBehaviour
 
     void AddPokeToPool(PokeModel modelToModify)
     {
-        if (StageOfTheGame.CurrentStateOfTheGame== StateOfTheGame.Loading)
-        GetComponent<LoadingManager>().LoadUpPokeUI();
+        
         GetComponent<PokePool>().AddPoke(modelToModify);
+        if (StageOfTheGame.CurrentStateOfTheGame == StateOfTheGame.Loading)
+            GetComponent<LoadingManager>().LoadUpPokeUI();
     }
 }

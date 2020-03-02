@@ -35,6 +35,9 @@ public class LoadingManager : MonoBehaviour
     void PokePlayerMoveIn()
     {
         PlayerPoke.SetActive(true);
+        PokeModel poke = FindObjectOfType<PokePool>().GivePoke();
+        FindObjectOfType<PlayerPokeController>().PlayerPoke = poke;
+        FindObjectOfType<PlayerPokeController>().UpdatePokeUI();
         //LeanTween.easeInBounce
     }
 
@@ -45,6 +48,8 @@ public class LoadingManager : MonoBehaviour
         {
             StageOfTheGame.CurrentStateOfTheGame = StateOfTheGame.ChoseFirstPoke;
             GetComponent<TypeCounter>().WriteOutTypes();
+           
+           
             StartCoroutine(OnLoadedLevel());
             
             

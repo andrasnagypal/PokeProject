@@ -1,13 +1,14 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.EventSystems;
 
 public enum TypesOfPoke
 {
 
 }
 
-public class TypeCounter : MonoBehaviour
+public class TypeCounter : MonoBehaviour, IPointerEnterHandler
 {
 
     public string[] TypesOfPoke;
@@ -21,6 +22,11 @@ public class TypeCounter : MonoBehaviour
         {
             TypeCounterDict.Add(poketype, 1);
         }
+    }
+
+    public void OnPointerEnter(PointerEventData eventData)
+    {
+        throw new System.NotImplementedException();
     }
 
     public void WriteOutTypes()
