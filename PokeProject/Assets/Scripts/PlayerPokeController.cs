@@ -6,7 +6,8 @@ using UnityEngine.UI;
 
 public class PlayerPokeController : MonoBehaviour
 {
-    public PlayerPokeUI PlayerPokeView;
+    [SerializeField] PlayerPokeUI PlayerPokeView;
+    [SerializeField] StaminaBarController StaminaUI;
     //PokeModel TheData;
 
     //private void Awake()
@@ -32,10 +33,34 @@ public class PlayerPokeController : MonoBehaviour
     {
         if (PlayerPoke.SpritesOfPoke[(int)SpriteURLIndexEnum.front_default]!=null)
         {
-            Texture2D temp = Instantiate(PlayerPoke.SpritesOfPoke[(int)SpriteURLIndexEnum.front_default]);
-            PlayerPokeView.AddImage(temp);
+           //exture2D temp = Instantiate(PlayerPoke.SpritesOfPoke[(int)SpriteURLIndexEnum.front_default]);
+            PlayerPokeView.AddImage(PlayerPoke.SpritesOfPoke[(int)SpriteURLIndexEnum.front_default]);
+            
         }
         else PlayerPokeView.AddImage(PlayerPoke.SpritesOfPoke[(int)SpriteURLIndexEnum.back_default]);
+        if (PlayerPoke.SpritesOfPoke[(int)SpriteURLIndexEnum.front_female] != null)
+        {
+            //exture2D temp = Instantiate(PlayerPoke.SpritesOfPoke[(int)SpriteURLIndexEnum.front_default]);
+            PlayerPokeView.AddImage(PlayerPoke.SpritesOfPoke[(int)SpriteURLIndexEnum.front_female]);
+
+        }
+        PlayerPokeView.NameThePokeDisplay(PlayerPoke.PokeName);
+        for (int i = 0; i < PlayerPoke.Stamina; i++)
+        {
+            StaminaUI.AddStaminaPointToUI();
+        }
+        PlayerPokeView.UpdateAttackDisplay(PlayerPoke.MaxNumberOfAttacks);
+        Debug.Log("StaminaPoints: " + PlayerPoke.Stamina);
+        Debug.Log("Attack: " + PlayerPoke.MaxNumberOfAttacks);
+
     }
 
+
+    public void GetAnotherPoke()
+    {
+        PokeModel newPoke = FindObjectOfType<PokePool>().GivePoke();
+        StaminaUI.ResetStaminaBar();
+        PlayerPoke = newPoke;
+        UpdatePokeUI();
+    }
 }

@@ -66,6 +66,7 @@ public class PokeFactory : MonoBehaviour
             TheData.TypesOfPoke[i] = types[i]["type"]["name"];
             GetComponent<TypeCounter>().AddToCounter(TheData.TypesOfPoke[i]);
         }
+        Debug.Log("Type number: " + (types.Count + 1));
         JSONNode abilities = basicInfoForPoke["abilities"];
         TheData.AbilitiesOfPoke = new string[abilities.Count];
         for (int i = 0; i < abilities.Count; i++)
