@@ -11,7 +11,13 @@ public enum TypesOfPoke
 public class TypeCounter : MonoBehaviour, IPointerEnterHandler
 {
 
-    public string[] TypesOfPoke;
+    public string[] TypesOfPoke,DamageRelationNames=new string[] {
+    "no_damage_to",
+    "half_damage_to",
+    "double_damage_to",
+    "no_damage_from",
+    "half_damage_from",
+    "double_damage_from"};
     Dictionary<string, int> TypeCounterDict = new Dictionary<string, int>();
 
     public void AddToCounter(string poketype)
@@ -36,5 +42,12 @@ public class TypeCounter : MonoBehaviour, IPointerEnterHandler
             Debug.Log("Key: " + item.Key + " value: " + item.Value);
         }
     }
-    
+    public int GetIndexOfType(string type)
+    {
+        return TypeCounterDict[type];
+    }
+    public string GetNameOfTpye(int type)
+    {
+        return TypesOfPoke[type];
+    }
 }
