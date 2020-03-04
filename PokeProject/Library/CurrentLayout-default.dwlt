@@ -21,7 +21,11 @@ MonoBehaviour:
   m_ShowMode: 4
   m_Title: 
   m_RootView: {fileID: 2}
+<<<<<<< .merge_file_a09440
   m_MinSize: {x: 875, y: 300}
+=======
+  m_MinSize: {x: 875, y: 542}
+>>>>>>> .merge_file_a05572
   m_MaxSize: {x: 10000, y: 10000}
   m_Maximized: 0
 --- !u!114 &2
@@ -46,7 +50,7 @@ MonoBehaviour:
     y: 0
     width: 1904
     height: 981
-  m_MinSize: {x: 875, y: 300}
+  m_MinSize: {x: 875, y: 542}
   m_MaxSize: {x: 10000, y: 10000}
 --- !u!114 &3
 MonoBehaviour:
@@ -115,7 +119,7 @@ MonoBehaviour:
   m_MinSize: {x: 679, y: 492}
   m_MaxSize: {x: 14002, y: 14042}
   vertical: 0
-  controlID: 19
+  controlID: 119
 --- !u!114 &6
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -140,7 +144,11 @@ MonoBehaviour:
   m_MinSize: {x: 403, y: 492}
   m_MaxSize: {x: 10001, y: 14042}
   vertical: 1
+<<<<<<< .merge_file_a09440
   controlID: 110
+=======
+  controlID: 137
+>>>>>>> .merge_file_a05572
 --- !u!114 &7
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -165,7 +173,11 @@ MonoBehaviour:
   m_MinSize: {x: 403, y: 221}
   m_MaxSize: {x: 8003, y: 4021}
   vertical: 0
+<<<<<<< .merge_file_a09440
   controlID: 111
+=======
+  controlID: 58
+>>>>>>> .merge_file_a05572
 --- !u!114 &8
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -393,9 +405,15 @@ MonoBehaviour:
   m_SceneHierarchy:
     m_TreeViewState:
       scrollPos: {x: 0, y: 0}
+<<<<<<< .merge_file_a09440
       m_SelectedIDs: 90360000
       m_LastClickedID: 0
       m_ExpandedIDs: 6efbffff
+=======
+      m_SelectedIDs: f8340000
+      m_LastClickedID: 0
+      m_ExpandedIDs: 8cf9ffffaef9ffffc4f9ffffb4faffff64fbffff
+>>>>>>> .merge_file_a05572
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
@@ -673,10 +691,17 @@ MonoBehaviour:
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
+<<<<<<< .merge_file_a09440
     scrollPos: {x: 0, y: 79}
     m_SelectedIDs: 
     m_LastClickedID: 0
     m_ExpandedIDs: 0000000006360000083600000a3600000c3600000e36000000ca9a3b
+=======
+    scrollPos: {x: 0, y: 106}
+    m_SelectedIDs: f8340000
+    m_LastClickedID: 13560
+    m_ExpandedIDs: 000000006c3400006e3400007034000072340000743400007a3400009c3400009e34000000ca9a3b
+>>>>>>> .merge_file_a05572
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -704,7 +729,11 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
+<<<<<<< .merge_file_a09440
     m_ExpandedIDs: 0000000006360000083600000a3600000c3600000e360000
+=======
+    m_ExpandedIDs: 000000006c3400006e340000703400007234000074340000
+>>>>>>> .merge_file_a05572
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -731,7 +760,11 @@ MonoBehaviour:
   m_ListAreaState:
     m_SelectedInstanceIDs: 
     m_LastClickedInstanceID: 0
+<<<<<<< .merge_file_a09440
     m_HadKeyboardFocusLastEvent: 0
+=======
+    m_HadKeyboardFocusLastEvent: 1
+>>>>>>> .merge_file_a05572
     m_ExpandedInstanceIDs: c6230000b279000086770000e27a00007e7c0000207b0100e2ef0000a410010000000000a6390000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
