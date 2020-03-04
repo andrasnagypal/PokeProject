@@ -22,6 +22,7 @@ public class PokeFactory : MonoBehaviour
     [SerializeField] string basePokeURL = "https://pokeapi.co/api/v2/";
     [SerializeField] int StaminaModifier=2, AttackModifier=3;
     [SerializeField] string[] SpriteURLNames;
+    [SerializeField] TypeCounter TypesList;
 
     public void GetPokemon(int indexofPoke)
     {
@@ -66,6 +67,14 @@ public class PokeFactory : MonoBehaviour
             TheData.TypesOfPoke[i] = types[i]["type"]["name"];
             GetComponent<TypeCounter>().AddToCounter(TheData.TypesOfPoke[i]);
         }
+        TheData.DamageRelationsArray = new byte[types["damage_relations"].Count];
+        JSONNode damagerelations = types["damage_relations"];
+        for (int i = 0; i < types["damage_relations"].Count; i++)
+        {
+            Debug.Log("VALAMI!!!!");
+            TheData.DamageRelationsArray[i] = (byte)TypesList.GetIndexOfType(damagerelations[TypesList.DamageRelationNames[i]]["name"]);
+            Debug.Log(TypesList.DamageRelationNames[i] + " " + TypesList.GetNameOfTpye(TheData.DamageRelationsArray[i]));
+        }
         Debug.Log("Type number: " + (types.Count + 1));
         JSONNode abilities = basicInfoForPoke["abilities"];
         TheData.AbilitiesOfPoke = new string[abilities.Count];
@@ -81,19 +90,9 @@ public class PokeFactory : MonoBehaviour
         for (int i = 0; i < SpriteURLNames.Length; i++)
         {
             string SpriteURL = basicInfoForPoke["sprites"][SpriteURLNames[i]];
-            //Debug.Log(basicInfoForPoke["sprites"][SpriteURLNames[i]]);
+            
             StartCoroutine(SetSpriteForPoke(i, SpriteURL, TheData));
-            //UnityWebRequest SpriteRequest = UnityWebRequestTexture.GetTexture(SpriteURL);
-            //yield return SpriteRequest.SendWebRequest();
-
-            //if (SpriteRequest.isNetworkError || SpriteRequest.isHttpError)
-            //{
-            //    Debug.LogError(SpriteRequest.error);
-            //    yield break;
-            //}
-            //TheData.SpritesOfPoke[i] = DownloadHandlerTexture.GetContent(SpriteRequest);
-            //if (TheData.SpritesOfPoke[i])
-            //TheData.SpritesOfPoke[i].filterMode = FilterMode.Point;
+           
         }
         yield return null;
        
@@ -101,8 +100,7 @@ public class PokeFactory : MonoBehaviour
 
     IEnumerator SetSpriteForPoke(int index,string url, PokeModel data)
     {
-        //string SpriteURL = basicInfoForPoke["sprites"][SpriteURLNames[i]];
-        //Debug.Log(basicInfoForPoke["sprites"][SpriteURLNames[i]]);
+        
         Debug.Log("Index: " + index + " " + url);
         if (!string.IsNullOrEmpty(url) && !string.IsNullOrWhiteSpace(url))
         {
