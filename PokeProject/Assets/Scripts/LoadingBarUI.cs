@@ -35,7 +35,7 @@ public class LoadingBarUI : MonoBehaviour
 
         if (CurrentLoad < MaxAmountOfLoadingTicks)
         {
-            Debug.Log("Increase");
+            Debug.Log("Increase + "+ CurrentLoad);
             LoadingBar.fillAmount = (float)CurrentLoad++ / MaxAmountOfLoadingTicks;
         }
         if (CurrentLoad == MaxAmountOfLoadingTicks)

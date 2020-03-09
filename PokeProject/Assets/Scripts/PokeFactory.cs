@@ -21,7 +21,15 @@ public class PokeFactory : MonoBehaviour
 {
     [SerializeField] string basePokeURL = "https://pokeapi.co/api/v2/";
     [SerializeField] int StaminaModifier=2, AttackModifier=3;
-    [SerializeField] string[] SpriteURLNames;
+     string[] SpriteURLNames=new string[] {
+    "back_default",
+    "back_female",
+    "back_shiny",
+    "back_shiny_female",
+    "front_default",
+    "front_female",
+    "front_shiny",
+    "front_shiny_female"};
     [SerializeField] TypeCounter TypesList;
 
     public void GetPokemon(int indexofPoke)

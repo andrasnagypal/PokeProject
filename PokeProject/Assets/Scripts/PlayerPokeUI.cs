@@ -6,7 +6,7 @@ using UnityEngine.UI;
 
 public class PlayerPokeUI : MonoBehaviour
 {
-    RawImage TheImage;
+    [SerializeField] RawImage TheImage;
     [SerializeField] TextMeshProUGUI NameOfThePoke;
     [SerializeField] TextMeshProUGUI AttackDisplay;
     void Awake()

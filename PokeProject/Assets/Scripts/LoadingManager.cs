@@ -6,25 +6,21 @@ using UnityEngine;
 public class LoadingManager : MonoBehaviour
 {
     [SerializeField] GameObject Grass1, Grass2, Grass3, Land, RiverGrass, River, Trees;
-    [SerializeField] Vector3 Grass1ScaleTo, Grass2ScaleTo, Grass3ScaleTo, LandScaleTo, RiverGrassScaleTo, RiverScaleTo, TreeScaleTo,PlayerPokeToScale,EnemyPokeToScale,PokePanelToScale;
+    [SerializeField] Vector3  LandScaleTo, RiverGrassScaleTo, RiverScaleTo, TreeScaleTo,PlayerPokeToScale,EnemyPokeToScale,PokePanelToScale;
     [SerializeField] float MoveUpTime, ScaleUpTime, LoadingBarDisappear;
     [SerializeField] GameObject PlayerPoke, EnemyPoke, PokePanel,LoadingBar;
     [SerializeField] LoadingBarUI LoadingView;
     delegate void PokePlay();
-    private void Start()
-    {
-        //OnLoadedLevel();
-        
-    }
+   
     IEnumerator OnLoadedLevel()
     {
         yield return new WaitForSeconds(.66f);
         Action temp = PokePlayerMoveIn;
         LeanTween.scale(LoadingBar, Vector3.zero, LoadingBarDisappear).setDestroyOnComplete(true);
         LeanTween.scale(Land, LandScaleTo, ScaleUpTime).setOnComplete(temp);
-        LeanTween.scale(Grass1, Grass1ScaleTo, .01f);
-        LeanTween.scale(Grass2, Grass2ScaleTo, .01f);
-        LeanTween.scale(Grass3, Grass3ScaleTo, .01f);
+        //LeanTween.scale(Grass1, vE, .01f);
+        //LeanTween.scale(Grass2, Grass2ScaleTo, .01f);
+        //LeanTween.scale(Grass3, Grass3ScaleTo, .01f);
         LeanTween.moveLocalY(Grass1, 0, MoveUpTime);
         LeanTween.moveLocalY(Grass2, 0, MoveUpTime);
         LeanTween.moveLocalY(Grass3, 0, MoveUpTime);
