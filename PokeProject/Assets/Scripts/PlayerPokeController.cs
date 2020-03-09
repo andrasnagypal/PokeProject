@@ -33,7 +33,8 @@ public class PlayerPokeController : MonoBehaviour
     {
         if (PlayerPoke.SpritesOfPoke[(int)SpriteURLIndexEnum.front_default]!=null)
         {
-           //exture2D temp = Instantiate(PlayerPoke.SpritesOfPoke[(int)SpriteURLIndexEnum.front_default]);
+            //exture2D temp = Instantiate(PlayerPoke.SpritesOfPoke[(int)SpriteURLIndexEnum.front_default]);
+           
             PlayerPokeView.AddImage(PlayerPoke.SpritesOfPoke[(int)SpriteURLIndexEnum.front_default]);
             
         }

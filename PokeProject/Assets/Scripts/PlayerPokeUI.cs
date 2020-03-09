@@ -9,14 +9,11 @@ public class PlayerPokeUI : MonoBehaviour
     [SerializeField] RawImage TheImage;
     [SerializeField] TextMeshProUGUI NameOfThePoke;
     [SerializeField] TextMeshProUGUI AttackDisplay;
-    void Awake()
-    {
-        TheImage = GetComponent<RawImage>();
-        
-    }
+   
 
     public void AddImage(Texture2D sprite)
     {
+      
         TheImage.texture = sprite;
     }
 

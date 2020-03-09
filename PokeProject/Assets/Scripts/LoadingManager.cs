@@ -10,6 +10,7 @@ public class LoadingManager : MonoBehaviour
     [SerializeField] float MoveUpTime, ScaleUpTime, LoadingBarDisappear;
     [SerializeField] GameObject PlayerPoke, EnemyPoke, PokePanel,LoadingBar;
     [SerializeField] LoadingBarUI LoadingView;
+    [SerializeField] PlayerPokeController PPokeController;
     delegate void PokePlay();
    
     IEnumerator OnLoadedLevel()
@@ -31,9 +32,11 @@ public class LoadingManager : MonoBehaviour
     void PokePlayerMoveIn()
     {
         PlayerPoke.SetActive(true);
-        PokeModel poke = FindObjectOfType<PokePool>().GivePoke();
-        FindObjectOfType<PlayerPokeController>().PlayerPoke = poke;
-        FindObjectOfType<PlayerPokeController>().UpdatePokeUI();
+        PokeModel poke = GetComponent<PokePool>().GivePoke();
+        /*FindObjectOfType<PlayerPokeController>()*/
+        PPokeController.PlayerPoke = poke;
+        /*FindObjectOfType<PlayerPokeController>()*/
+        PPokeController.UpdatePokeUI();
         //LeanTween.easeInBounce
     }
 

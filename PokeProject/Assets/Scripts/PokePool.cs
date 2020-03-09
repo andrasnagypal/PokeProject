@@ -45,6 +45,7 @@ public class PokePool : MonoBehaviour
     }
     public PokeModel GivePoke()
     {
+        Debug.Log("PokePool: " + ListOfPokeModels.Count);
         return ListOfPokeModels.Dequeue();
     }
 }
