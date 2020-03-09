@@ -8,6 +8,7 @@ public class PlayerPokeController : MonoBehaviour
 {
     [SerializeField] PlayerPokeUI PlayerPokeView;
     [SerializeField] StaminaBarController StaminaUI;
+    [SerializeField] PlayerPokeTypeDisplay TypeDisplay;
     //PokeModel TheData;
 
     //private void Awake()
