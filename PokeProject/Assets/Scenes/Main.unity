@@ -2647,6 +2647,81 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 491257746}
   m_CullTransparentMesh: 0
+--- !u!1 &501866557
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 501866558}
+  - component: {fileID: 501866559}
+  - component: {fileID: 501866560}
+  m_Layer: 5
+  m_Name: Content
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &501866558
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 501866557}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 540278116}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: -1.6000004, y: 287.9}
+  m_Pivot: {x: 0, y: 1}
+--- !u!114 &501866559
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 501866557}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8a8695521f0d02e499659fee002a26c2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Padding:
+    m_Left: 5
+    m_Right: 5
+    m_Top: 5
+    m_Bottom: 5
+  m_ChildAlignment: 1
+  m_StartCorner: 0
+  m_StartAxis: 0
+  m_CellSize: {x: 200, y: 60}
+  m_Spacing: {x: 5, y: 5}
+  m_Constraint: 1
+  m_ConstraintCount: 1
+--- !u!114 &501866560
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 501866557}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 99d13b36bd0c8164faf1f3c7a23c3c63, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  AbilityToAttach: {fileID: 7218628898554752456, guid: 27af37676890acb4fb118034acd1309c,
+    type: 3}
 --- !u!1 &503438072
 GameObject:
   m_ObjectHideFlags: 0
@@ -2981,6 +3056,7 @@ RectTransform:
   - {fileID: 1714628077}
   - {fileID: 1088549483}
   - {fileID: 684002045}
+  - {fileID: 540278116}
   m_Father: {fileID: 1151674372}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -3168,6 +3244,80 @@ CanvasRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 540065121}
+  m_CullTransparentMesh: 0
+--- !u!1 &540278115
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 540278116}
+  - component: {fileID: 540278119}
+  - component: {fileID: 540278118}
+  m_Layer: 5
+  m_Name: PokeAbilityPanel
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &540278116
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 540278115}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 501866558}
+  m_Father: {fileID: 536049643}
+  m_RootOrder: 4
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 1, y: 0.5}
+  m_AnchorMax: {x: 1, y: 0.5}
+  m_AnchoredPosition: {x: 100, y: 0}
+  m_SizeDelta: {x: 200, y: 290}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &540278118
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 540278115}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 0.392}
+  m_RaycastTarget: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 10907, guid: 0000000000000000f000000000000000, type: 0}
+  m_Type: 1
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &540278119
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 540278115}
   m_CullTransparentMesh: 0
 --- !u!1 &563275301
 GameObject:
@@ -3518,7 +3668,7 @@ MonoBehaviour:
   m_StartCorner: 0
   m_StartAxis: 0
   m_CellSize: {x: 20, y: 20}
-  m_Spacing: {x: 10, y: 10}
+  m_Spacing: {x: 5, y: 5}
   m_Constraint: 1
   m_ConstraintCount: 3
 --- !u!1 &632170074
@@ -7177,6 +7327,7 @@ MonoBehaviour:
   PlayerPokeView: {fileID: 1151674375}
   StaminaUI: {fileID: 1088549484}
   TypeDisplay: {fileID: 684002048}
+  AbilityDisplay: {fileID: 501866560}
 --- !u!1 &1153806763
 GameObject:
   m_ObjectHideFlags: 0
@@ -11144,7 +11295,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   NumberOfPokeShouldBeInPool: 25
-  IsLessThanThisAmountStartLoadingOtherPokes: 5
+  IsLessThanThisAmountStartLoadingOtherPokes: 10
   basePokeURL: https://pokeapi.co/api/v2/
 --- !u!114 &1690580173
 MonoBehaviour:
@@ -11158,6 +11309,25 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c554d3140cb3d1f49b012697bad51839, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  ListOfTypeImages:
+  - {fileID: 21300000, guid: 8fa63f4074d871a43a8c758a2e14a33f, type: 3}
+  - {fileID: 21300000, guid: 0ceb6d0d8e95ef74bb36ca87139aa54d, type: 3}
+  - {fileID: 21300000, guid: d7643b8e5dc8e7d4dac05f9b237b057f, type: 3}
+  - {fileID: 21300000, guid: 788f0cbe6cff0e14ea9f448a15d7d2eb, type: 3}
+  - {fileID: 21300000, guid: c9cc9b8cc63cb454c9536288e2098d0d, type: 3}
+  - {fileID: 21300000, guid: 13f0f0c191886a7449b2cd7d16a6ee9b, type: 3}
+  - {fileID: 21300000, guid: d706113b7b935624ebe44cd502890739, type: 3}
+  - {fileID: 21300000, guid: df8e704bb28bdfd43bca32b4762717dd, type: 3}
+  - {fileID: 21300000, guid: 3a9b5de24a0a5d44b9eefe234c81d030, type: 3}
+  - {fileID: 21300000, guid: 015070165c002d343b282b8f1703c296, type: 3}
+  - {fileID: 21300000, guid: 69e6f602c8d51ef4695a4595dc461cce, type: 3}
+  - {fileID: 21300000, guid: acb1938d41d6f554ba1aadbaaf9b65d9, type: 3}
+  - {fileID: 21300000, guid: 74e68534d7f9724428dcb97ebccfdc6a, type: 3}
+  - {fileID: 21300000, guid: 322175e660deb3b4baa4bcd683f7c87d, type: 3}
+  - {fileID: 21300000, guid: d8ea325f3d61e6f4b87993291b92a151, type: 3}
+  - {fileID: 21300000, guid: c9da4408cd7206446873a243b55c36cb, type: 3}
+  - {fileID: 21300000, guid: f5fb6f04f8b780c4e8e78c8a32cb5d0f, type: 3}
+  - {fileID: 21300000, guid: 75501101601535843a52a1844db3edab, type: 3}
   TypesOfPoke:
   - psychic
   - fairy

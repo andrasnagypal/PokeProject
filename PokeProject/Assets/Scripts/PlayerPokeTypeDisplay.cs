@@ -7,7 +7,7 @@ public class PlayerPokeTypeDisplay : MonoBehaviour
 {
     [SerializeField] List<Image> TypeUI = new List<Image>();
     int CounterForTypes = 0;
-
+    string[] TypesForThisPoke;
     private void Awake()
     {
         ResetUI();
@@ -24,7 +24,23 @@ public class PlayerPokeTypeDisplay : MonoBehaviour
         foreach (Image item in TypeUI)
         {
             item.sprite = null;
+            item.gameObject.SetActive(false);
            
         }
+    }
+    public void SetTypesAndUI(string[] types)
+    {
+        TypesForThisPoke = types;
+        for (int i = 0; i < TypesForThisPoke.Length; i++)
+        {
+           Sprite temp= FindObjectOfType<TypeCounter>().GetSpriteForType(TypesForThisPoke[i]);
+            SetTypeUIIcon(temp);
+        }
+    }
+
+   public void SetTypeUIIcon(Sprite sprite)
+    {
+        TypeUI[CounterForTypes].gameObject.SetActive(true);
+        TypeUI[CounterForTypes++].sprite = sprite;
     }
 }

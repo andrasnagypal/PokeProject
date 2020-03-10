@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.EventSystems;
 
+
 public enum TypesOfPoke
 {
 
@@ -10,8 +11,30 @@ public enum TypesOfPoke
 
 public class TypeCounter : MonoBehaviour, IPointerEnterHandler
 {
-
-    public string[] TypesOfPoke,DamageRelationNames=new string[] {
+    public List<Sprite> ListOfTypeImages = new List<Sprite>();
+    public string[] TypesOfPoke = new string[]
+    {
+        "psychic",
+        "fairy",
+        "water",
+        "poison",
+        "bug",
+        "fighting",
+        "grass",
+        "fire",
+        "ice",
+        "dragon",
+        "ghost",
+        "electric",
+        "flying",
+        "ground",
+        "dark",
+        "steel",
+        "normal",
+        "rock"
+    },
+        
+        DamageRelationNames=new string[] {
     "no_damage_to",
     "half_damage_to",
     "double_damage_to",
@@ -49,5 +72,20 @@ public class TypeCounter : MonoBehaviour, IPointerEnterHandler
     public string GetNameOfTpye(int type)
     {
         return TypesOfPoke[type];
+    }
+
+    public Sprite GetSpriteForType(string typename)
+    {
+        Sprite temp=null;
+        for (int i = 0; i < TypesOfPoke.Length; i++)
+        {
+            if(TypesOfPoke[i]==typename)
+            {
+                temp = ListOfTypeImages[i];
+                break;
+            }
+        }
+
+        return temp;
     }
 }

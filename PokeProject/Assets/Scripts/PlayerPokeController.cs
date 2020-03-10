@@ -9,32 +9,16 @@ public class PlayerPokeController : MonoBehaviour
     [SerializeField] PlayerPokeUI PlayerPokeView;
     [SerializeField] StaminaBarController StaminaUI;
     [SerializeField] PlayerPokeTypeDisplay TypeDisplay;
-    //PokeModel TheData;
-
-    //private void Awake()
-    //{
-    //    TheData = new PokeModel();
-    //}
+    [SerializeField] PokeAbilityDisplay AbilityDisplay;
+    
     public PokeModel PlayerPoke;
-    //{
-    //    get { return TheData; }  set
-    //    {
-    //        TheData = value;
-    //        //for (int i = 0; i < TheData.SpritesOfPoke.Length; i++)
-    //        //{
-    //        //    Debug.Log(TheData.SpritesOfPoke[i]);
-    //        //    if(TheData.SpritesOfPoke[i]!=null)
-    //        //        PlayerPokeView.AddImage(TheData.SpritesOfPoke[i]);
-    //        //}
-    //        PlayerPokeView.AddImage(TheData.SpritesOfPoke[(int)SpriteURLIndexEnum.front_default]);
-    //    }
-    //}
+    
 
     public void UpdatePokeUI()
     {
         if (PlayerPoke.SpritesOfPoke[(int)SpriteURLIndexEnum.front_default]!=null)
         {
-            //exture2D temp = Instantiate(PlayerPoke.SpritesOfPoke[(int)SpriteURLIndexEnum.front_default]);
+            
            
             PlayerPokeView.AddImage(PlayerPoke.SpritesOfPoke[(int)SpriteURLIndexEnum.front_default]);
             
@@ -42,7 +26,7 @@ public class PlayerPokeController : MonoBehaviour
         else PlayerPokeView.AddImage(PlayerPoke.SpritesOfPoke[(int)SpriteURLIndexEnum.back_default]);
         if (PlayerPoke.SpritesOfPoke[(int)SpriteURLIndexEnum.front_female] != null)
         {
-            //exture2D temp = Instantiate(PlayerPoke.SpritesOfPoke[(int)SpriteURLIndexEnum.front_default]);
+            
             PlayerPokeView.AddImage(PlayerPoke.SpritesOfPoke[(int)SpriteURLIndexEnum.front_female]);
 
         }
@@ -62,7 +46,11 @@ public class PlayerPokeController : MonoBehaviour
     {
         PokeModel newPoke = FindObjectOfType<PokePool>().GivePoke();
         StaminaUI.ResetStaminaBar();
+        TypeDisplay.ResetUI();
+        AbilityDisplay.ResetUI();
         PlayerPoke = newPoke;
+        TypeDisplay.SetTypesAndUI(PlayerPoke.TypesOfPoke);
+        AbilityDisplay.SetAbilitiesName(PlayerPoke.AbilitiesOfPoke);
         UpdatePokeUI();
     }
 }
