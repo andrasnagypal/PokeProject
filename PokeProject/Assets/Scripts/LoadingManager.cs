@@ -32,11 +32,11 @@ public class LoadingManager : MonoBehaviour
     void PokePlayerMoveIn()
     {
         PlayerPoke.SetActive(true);
-        PokeModel poke = GetComponent<PokePool>().GivePoke();
+       
         /*FindObjectOfType<PlayerPokeController>()*/
-        PPokeController.PlayerPoke = poke;
+       
         /*FindObjectOfType<PlayerPokeController>()*/
-        PPokeController.UpdatePokeUI();
+        PPokeController.GetAnotherPoke();
         //LeanTween.easeInBounce
     }
 

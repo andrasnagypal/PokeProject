@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class PokeAbilityDisplay : MonoBehaviour
 {
@@ -15,8 +16,17 @@ public class PokeAbilityDisplay : MonoBehaviour
         ListOfAbilities.Add(temp);
     }
 
+    public void SetAbilityImages(Sprite[] sprite)
+    {
+        for (int i = 0; i < ListOfAbilities.Count; i++)
+        {
+            int rnd = Random.Range(0, sprite.Length );
+            ListOfAbilities[i].transform.Find("AbilityImage").GetComponent<Image>().sprite = sprite[rnd];
+        }
+    }
     public void SetAbilitiesName(string[] names)
     {
+        ResetUI();
         NameOfAbilities = names;
         for (int i = 0; i < NameOfAbilities.Length; i++)
         {

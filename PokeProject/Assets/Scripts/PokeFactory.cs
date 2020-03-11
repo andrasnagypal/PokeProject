@@ -54,13 +54,7 @@ public class PokeFactory : MonoBehaviour
         JSONNode pokeInfo = JSON.Parse(pokeInfoRequest.downloadHandler.text);
         yield return null;
         StartCoroutine(FillUpPokeModel(pokeInfo));
-        //PokemonDataModel.ListOfPokemons.Add(pokemonIndex, pokeInfo);
-        //Debug.Log("Pokes: "+PokemonDataModel.ListOfPokemons.Count);
-        //Debug.Log("Index : "+CurrentIndex);
-        //if (CurrentIndex < EndIndex)
-        //    StartCoroutine(GetPokemAtIndex(CurrentIndex++));
-        //else
-        //    Debug.Log(PokemonDataModel.ListOfPokemons.Count);
+       
     }
 
     IEnumerator FillUpPokeModel(JSONNode basicInfoForPoke)
@@ -79,11 +73,11 @@ public class PokeFactory : MonoBehaviour
         JSONNode damagerelations = types["damage_relations"];
         for (int i = 0; i < types["damage_relations"].Count; i++)
         {
-            Debug.Log("VALAMI!!!!");
+           
             TheData.DamageRelationsArray[i] = (byte)TypesList.GetIndexOfType(damagerelations[TypesList.DamageRelationNames[i]]["name"]);
-            Debug.Log(TypesList.DamageRelationNames[i] + " " + TypesList.GetNameOfTpye(TheData.DamageRelationsArray[i]));
+           
         }
-        Debug.Log("Type number: " + (types.Count + 1));
+       
         JSONNode abilities = basicInfoForPoke["abilities"];
         TheData.AbilitiesOfPoke = new string[abilities.Count];
         for (int i = 0; i < abilities.Count; i++)
@@ -109,7 +103,7 @@ public class PokeFactory : MonoBehaviour
     IEnumerator SetSpriteForPoke(int index,string url, PokeModel data)
     {
         
-        Debug.Log("Index: " + index + " " + url);
+       
         if (!string.IsNullOrEmpty(url) && !string.IsNullOrWhiteSpace(url))
         {
             UnityWebRequest SpriteRequest = UnityWebRequestTexture.GetTexture(url);

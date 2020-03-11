@@ -3183,6 +3183,7 @@ GameObject:
   - component: {fileID: 540065122}
   - component: {fileID: 540065124}
   - component: {fileID: 540065123}
+  - component: {fileID: 540065125}
   m_Layer: 5
   m_Name: Image (2)
   m_TagString: Untagged
@@ -3245,6 +3246,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 540065121}
   m_CullTransparentMesh: 0
+--- !u!114 &540065125
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 540065121}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 744ca50a1be766b498faa24b8cad426b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  TypeName: Valami
 --- !u!1 &540278115
 GameObject:
   m_ObjectHideFlags: 0
@@ -3296,7 +3310,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 0.392}
+  m_Color: {r: 1, g: 1, b: 1, a: 0}
   m_RaycastTarget: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
@@ -4082,6 +4096,7 @@ GameObject:
   - component: {fileID: 727542881}
   - component: {fileID: 727542883}
   - component: {fileID: 727542882}
+  - component: {fileID: 727542884}
   m_Layer: 5
   m_Name: Image
   m_TagString: Untagged
@@ -4144,6 +4159,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 727542880}
   m_CullTransparentMesh: 0
+--- !u!114 &727542884
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 727542880}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 744ca50a1be766b498faa24b8cad426b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  TypeName: Valami
 --- !u!1 &733624614
 GameObject:
   m_ObjectHideFlags: 0
@@ -7239,7 +7267,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1151674372
 RectTransform:
   m_ObjectHideFlags: 0
@@ -10770,6 +10798,7 @@ GameObject:
   - component: {fileID: 1645517686}
   - component: {fileID: 1645517688}
   - component: {fileID: 1645517687}
+  - component: {fileID: 1645517689}
   m_Layer: 5
   m_Name: Image (1)
   m_TagString: Untagged
@@ -10832,6 +10861,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1645517685}
   m_CullTransparentMesh: 0
+--- !u!114 &1645517689
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1645517685}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 744ca50a1be766b498faa24b8cad426b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  TypeName: Valami
 --- !u!1 &1647421170
 GameObject:
   m_ObjectHideFlags: 0
@@ -11210,6 +11252,7 @@ GameObject:
   - component: {fileID: 1690580172}
   - component: {fileID: 1690580171}
   - component: {fileID: 1690580170}
+  - component: {fileID: 1690580174}
   m_Layer: 0
   m_Name: GameManager
   m_TagString: Untagged
@@ -11354,6 +11397,18 @@ MonoBehaviour:
   - no_damage_from
   - half_damage_from
   - double_damage_from
+--- !u!114 &1690580174
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1690580168}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ce87e917cc9fd7b44b20c999ac81ea47, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1692733461
 GameObject:
   m_ObjectHideFlags: 0

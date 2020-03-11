@@ -4,10 +4,6 @@ using UnityEngine;
 using UnityEngine.EventSystems;
 
 
-public enum TypesOfPoke
-{
-
-}
 
 public class TypeCounter : MonoBehaviour, IPointerEnterHandler
 {

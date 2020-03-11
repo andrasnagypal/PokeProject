@@ -30,17 +30,28 @@ public class PlayerPokeTypeDisplay : MonoBehaviour
     }
     public void SetTypesAndUI(string[] types)
     {
+        ResetUI();
         TypesForThisPoke = types;
         for (int i = 0; i < TypesForThisPoke.Length; i++)
         {
            Sprite temp= FindObjectOfType<TypeCounter>().GetSpriteForType(TypesForThisPoke[i]);
             SetTypeUIIcon(temp);
         }
+        
     }
 
    public void SetTypeUIIcon(Sprite sprite)
     {
         TypeUI[CounterForTypes].gameObject.SetActive(true);
         TypeUI[CounterForTypes++].sprite = sprite;
+    }
+    public Sprite[] GetAbilitySprites()
+    {
+        Sprite[] temp = new Sprite[TypesForThisPoke.Length];
+        for (int i = 0; i < TypesForThisPoke.Length; i++)
+        {
+            temp[i]= FindObjectOfType<TypeCounter>().GetSpriteForType(TypesForThisPoke[i]);
+        }
+            return temp;
     }
 }

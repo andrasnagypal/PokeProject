@@ -36,8 +36,7 @@ public class PlayerPokeController : MonoBehaviour
             StaminaUI.AddStaminaPointToUI();
         }
         PlayerPokeView.UpdateAttackDisplay(PlayerPoke.MaxNumberOfAttacks);
-        Debug.Log("StaminaPoints: " + PlayerPoke.Stamina);
-        Debug.Log("Attack: " + PlayerPoke.MaxNumberOfAttacks);
+       
 
     }
 
@@ -46,11 +45,12 @@ public class PlayerPokeController : MonoBehaviour
     {
         PokeModel newPoke = FindObjectOfType<PokePool>().GivePoke();
         StaminaUI.ResetStaminaBar();
-        TypeDisplay.ResetUI();
-        AbilityDisplay.ResetUI();
+        //TypeDisplay.ResetUI();
+        //AbilityDisplay.ResetUI();
         PlayerPoke = newPoke;
         TypeDisplay.SetTypesAndUI(PlayerPoke.TypesOfPoke);
         AbilityDisplay.SetAbilitiesName(PlayerPoke.AbilitiesOfPoke);
+        AbilityDisplay.SetAbilityImages(TypeDisplay.GetAbilitySprites());
         UpdatePokeUI();
     }
 }
