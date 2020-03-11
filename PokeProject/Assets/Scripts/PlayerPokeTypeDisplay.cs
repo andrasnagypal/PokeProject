@@ -35,6 +35,7 @@ public class PlayerPokeTypeDisplay : MonoBehaviour
         for (int i = 0; i < TypesForThisPoke.Length; i++)
         {
            Sprite temp= FindObjectOfType<TypeCounter>().GetSpriteForType(TypesForThisPoke[i]);
+            TypeUI[CounterForTypes].gameObject.GetComponent<TypeHoverOver>().TypeName = TypesForThisPoke[i];
             SetTypeUIIcon(temp);
         }
         
@@ -45,13 +46,5 @@ public class PlayerPokeTypeDisplay : MonoBehaviour
         TypeUI[CounterForTypes].gameObject.SetActive(true);
         TypeUI[CounterForTypes++].sprite = sprite;
     }
-    public Sprite[] GetAbilitySprites()
-    {
-        Sprite[] temp = new Sprite[TypesForThisPoke.Length];
-        for (int i = 0; i < TypesForThisPoke.Length; i++)
-        {
-            temp[i]= FindObjectOfType<TypeCounter>().GetSpriteForType(TypesForThisPoke[i]);
-        }
-            return temp;
-    }
+    
 }

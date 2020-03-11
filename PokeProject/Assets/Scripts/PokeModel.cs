@@ -14,6 +14,7 @@ public enum DamageRelations :byte
 public class PokeModel 
 {
     public string PokeName;
+    
     public Texture2D[] SpritesOfPoke;
     public string[] TypesOfPoke;
     public string[] AbilitiesOfPoke;

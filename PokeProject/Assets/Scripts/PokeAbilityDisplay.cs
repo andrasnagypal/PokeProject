@@ -16,12 +16,13 @@ public class PokeAbilityDisplay : MonoBehaviour
         ListOfAbilities.Add(temp);
     }
 
-    public void SetAbilityImages(Sprite[] sprite)
+    public void SetAbilityImages(string[] spritenames)
     {
         for (int i = 0; i < ListOfAbilities.Count; i++)
         {
-            int rnd = Random.Range(0, sprite.Length );
-            ListOfAbilities[i].transform.Find("AbilityImage").GetComponent<Image>().sprite = sprite[rnd];
+            int rnd = Random.Range(0, spritenames.Length );
+            ListOfAbilities[i].transform.Find("AbilityImage").GetComponent<Image>().sprite = FindObjectOfType<TypeCounter>().GetSpriteForType( spritenames[rnd]);
+            ListOfAbilities[i].transform.Find("AbilityImage").GetComponent<TypeHoverOver>().TypeName = spritenames[rnd];
         }
     }
     public void SetAbilitiesName(string[] names)

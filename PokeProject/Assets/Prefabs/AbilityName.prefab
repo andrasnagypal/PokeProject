@@ -87,6 +87,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   TypeName: 
+  OtherInfo: ' attack type'
 --- !u!1 &1609821249055279287
 GameObject:
   m_ObjectHideFlags: 0

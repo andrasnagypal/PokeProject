@@ -8,18 +8,13 @@ public class ToolTipController : MonoBehaviour
 {
     bool IsActive = false;
     [SerializeField]TextMeshProUGUI ToolTipInfo;
+    [SerializeField] GameObject ToolTip;
+    static IEnumerator TooltipNumerator = null;
     
-
-    // Update is called once per frame
-    void Update()
-    {
-        if (IsActive)
-            MoveToolTip();
-    }
 
     private void MoveToolTip()
     {
-        
+        ToolTip.transform.position = Input.mousePosition;
     }
     public void ChangeTooltipInfo(string info)
     {
@@ -27,6 +22,27 @@ public class ToolTipController : MonoBehaviour
     }
     public void SetTooltipState(bool state)
     {
-        ToolTipInfo.gameObject.SetActive(state);
+        ToolTip.gameObject.SetActive(state);
+        IsActive = state;
+        if (TooltipNumerator == null)
+        {
+            TooltipNumerator = TooltipPosition();
+            StartCoroutine(TooltipNumerator);
+        }
+        
+        
+       
+        
+    }
+
+    IEnumerator TooltipPosition()
+    {
+        while(IsActive)
+        {
+            MoveToolTip();
+            yield return new WaitForSeconds(.3f);
+        }
+        yield return null;
+        TooltipNumerator = null;
     }
 }

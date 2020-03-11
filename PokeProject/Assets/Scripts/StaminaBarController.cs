@@ -38,4 +38,8 @@ public class StaminaBarController : MonoBehaviour
         }
         StaminaPoints.Clear();
     }
+    public int GetNumberOFStamina()
+    {
+        return StaminaPoints.Count;
+    }
 }

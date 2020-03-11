@@ -5,16 +5,18 @@ using UnityEngine.EventSystems;
 
 public class TypeHoverOver : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler
 {
-    public string TypeName;
+    public string TypeName,OtherInfo;
 
     public void OnPointerEnter(PointerEventData eventData)
     {
-        Debug.Log(TypeName);
+        FindObjectOfType<ToolTipController>().SetTooltipState(true);
+        FindObjectOfType<ToolTipController>().ChangeTooltipInfo(TypeName.ToUpper()+ OtherInfo);
+
     }
 
     public void OnPointerExit(PointerEventData eventData)
     {
-        Debug.Log("End");
+        FindObjectOfType<ToolTipController>().SetTooltipState(false);
     }
 
    

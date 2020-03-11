@@ -50,7 +50,7 @@ public class PlayerPokeController : MonoBehaviour
         PlayerPoke = newPoke;
         TypeDisplay.SetTypesAndUI(PlayerPoke.TypesOfPoke);
         AbilityDisplay.SetAbilitiesName(PlayerPoke.AbilitiesOfPoke);
-        AbilityDisplay.SetAbilityImages(TypeDisplay.GetAbilitySprites());
+        AbilityDisplay.SetAbilityImages(PlayerPoke.TypesOfPoke);
         UpdatePokeUI();
     }
 }
