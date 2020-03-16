@@ -19,7 +19,7 @@ public class GamePlayManager : MonoBehaviour
     [SerializeField] EnemyPokeController EPokeController;
     [SerializeField] InfoBarController InfoBar;
     [SerializeField] GameObject PokeInventoryPanel;
-    GameTurnState StateOfTheGame;
+    static GameTurnState StateOfTheGame = GameTurnState.Attack;
 
     string[] InfoBarTags = new string[]
     {
@@ -44,7 +44,7 @@ public class GamePlayManager : MonoBehaviour
         ChangeState(GameTurnState.Attack);
     }
 
-    public void ChangeState(GameTurnState state)
+    public static void ChangeState(GameTurnState state)
     {
         StateOfTheGame = state;
     }
